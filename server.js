@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3005
 const app = express()
 const corsOptions = {
    credentials: true,
-   origin: [process.env.CLIENT, 'https://studio.apollographql.com']
+   origin: [process.env.CLIENT, 'https://agitated-bhabha-ba93cb.netlify.app', 'https://studio.apollographql.com']
 }
 
 let schema = makeExecutableSchema({ typeDefs: [constraintDirectiveTypeDefs, defs], resolvers })
