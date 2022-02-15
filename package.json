@@ -1,0 +1,29 @@
+{
+   "name": "merng",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "nodemon": "^2.0.15"
+   },
+   "dependencies": {
+      "@graphql-tools/resolvers-composition": "^6.4.1",
+      "@graphql-tools/schema": "^8.3.1",
+      "apollo-server-express": "^3.6.3",
+      "bcryptjs": "^2.4.3",
+      "dotenv": "^16.0.0",
+      "express": "^4.17.2",
+      "graphql": "^16.3.0",
+      "graphql-constraint-directive": "^2.3.0",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^6.2.1",
+      "nodemailer": "^6.7.2"
+   }
+}
