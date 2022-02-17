@@ -4,6 +4,7 @@ module.exports = gql`
    extend type Query {
       posts: [Post!]!
       post(id: ID!): Post!
+      userPosts(id: ID!): [Post!]!
    }
 
    extend type Mutation {

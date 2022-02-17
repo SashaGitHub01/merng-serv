@@ -16,6 +16,14 @@ const userSchema = new Schema({
       type: String,
       required: true
    },
+
+   avatar: {
+      type: String
+   },
+
+   background: {
+      type: String
+   }
 })
 
 module.exports = model('User', userSchema)

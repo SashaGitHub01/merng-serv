@@ -16,6 +16,18 @@ const resolvers = {
          }
       },
 
+      userPosts: async (_, { id }, { models }) => {
+         try {
+            const posts = await models.Post.find({ user: id })
+               .sort({ createdAt: 'desc' })
+               .populate({ path: 'user' })
+
+            return posts
+         } catch (err) {
+            throw new ApolloError(err.message)
+         }
+      },
+
       post: async (_, { id }, { models }) => {
          try {
             const post = await models.Post.findById(id).populate('user')

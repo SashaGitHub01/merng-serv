@@ -16,6 +16,16 @@ const resolvers = {
          } catch (err) {
             throw new ApolloError(err.message)
          }
+      },
+
+      user: async (_, { id }, { models }) => {
+         try {
+            const user = await models.User.findById(id);
+
+            return user;
+         } catch (err) {
+            throw new ApolloError(err.message)
+         }
       }
    },
 
@@ -31,7 +41,8 @@ const resolvers = {
             const data = {
                password: hash,
                username,
-               email
+               email,
+               avatar: 'https://res.cloudinary.com/twitter-uploads/image/upload/v1638945837/Avatars/corhyulgwhglo9bdkz4i.jpg'
             }
             const user = await models.User.create(data)
 
